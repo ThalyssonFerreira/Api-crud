@@ -1,4 +1,5 @@
 # API CRUD – Usuários (Node.js + Fastify + PostgreSQL)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Projeto de portfólio (Dev Júnior/Estágio): API REST de **Usuários** com CRUD, validação, migrações SQL, Swagger e Docker.
 

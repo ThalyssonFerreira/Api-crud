@@ -1,5 +1,5 @@
 # Users CRUD API (Node.js + Fastify + PostgreSQL)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 Portfolio project for **Junior Developer/Intern** positions: a Users REST API with full CRUD, validation, SQL migrations, OpenAPI (Swagger) docs, and Docker.
 
 **Live:** https://api-crud-8m6y.onrender.com  
