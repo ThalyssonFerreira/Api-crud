@@ -11,4 +11,6 @@ ENV NODE_ENV=production
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 EXPOSE 3000
-CMD ["node", "src/server.js"]
+ENV RUN_SEED=false
+CMD ["sh","-lc","node ./src/config/run-migrations.js && ( [ \"$RUN_SEED\" = \"true\" ] && node ./src/config/seed.js || true ) && node src/server.js"]
+
