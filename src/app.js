@@ -36,6 +36,15 @@ export async function buildApp() {
       deepLinking: true
     }
   });
+    app.route({
+    method: ['GET', 'HEAD'],
+    url: '/',
+    handler: async (req, reply) => {
+        const docsEnabled = (process.env.DOCS ?? 'true') !== 'false';
+        if (docsEnabled) return reply.redirect(302, '/docs');
+        return reply.send({ name: 'API CRUD - Usuários', docs: false, health: '/db/health' });
+    }
+    });
 
   app.get('/ping', async () => ({ pong: 'ok' }));
   await app.register(healthRoutes);
